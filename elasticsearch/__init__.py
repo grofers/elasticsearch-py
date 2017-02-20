@@ -3,7 +3,7 @@ from __future__ import absolute_import
 VERSION = (1, 9, 0)
 __version__ = VERSION
 __versionstr__ = '.'.join(map(str, VERSION))
-
+__versionstr__ += '-grofers'
 import sys
 
 if (2, 7) <= sys.version_info < (3, 2):
