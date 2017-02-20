@@ -20,7 +20,8 @@ tests_require = [
     'coverage',
     'mock',
     'pyaml',
-    'nosexcover'
+    'nosexcover',
+    'ujson'
 ]
 
 # use external unittest for 2.6

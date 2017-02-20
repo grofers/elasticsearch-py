@@ -1,7 +1,4 @@
-try:
-    import simplejson as json
-except ImportError:
-    import json
+import ujson as json
 import uuid
 from datetime import date, datetime
 from decimal import Decimal

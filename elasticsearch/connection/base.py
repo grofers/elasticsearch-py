@@ -1,8 +1,5 @@
 import logging
-try:
-    import simplejson as json
-except ImportError:
-    import json
+import ujson as json
 
 from ..exceptions import TransportError, HTTP_EXCEPTIONS
 
