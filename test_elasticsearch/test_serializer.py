@@ -17,7 +17,7 @@ class TestJSONSerializer(TestCase):
     def test_decimal_serialization(self):
         if sys.version_info[:2] == (2, 6):
             raise SkipTest("Float rounding is broken in 2.6.")
-        self.assertEquals('{"d": 3.8}', JSONSerializer().dumps({'d': Decimal('3.8')}))
+        self.assertEquals('{"d": 3.8}'.replace(' ',''), JSONSerializer().dumps({'d': Decimal('3.8')}).replace(' ', ''))
 
     def test_uuid_serialization(self):
         self.assertEquals('{"d": "00000000-0000-0000-0000-000000000003"}', JSONSerializer().dumps({'d': uuid.UUID('00000000-0000-0000-0000-000000000003')}))
